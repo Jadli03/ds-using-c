@@ -32,8 +32,6 @@ node* insertAtRight(node* right, int d)
             right  = p;
         }
     }
-    else
-        printf("insertion failed\n");
 
     return right;
 }
@@ -54,8 +52,7 @@ node* insertAtLeft(node* left, int d)
             left = p;
         }
     }
-    else
-        printf("insertion failed\n");
+
 
     return left;
 }
@@ -86,6 +83,8 @@ void display(node *left)
     }
 }
 
+
+
 int main()
 {
     node *left=NULL, *right=NULL;
@@ -109,10 +108,11 @@ int main()
 
         case 2:     x = getData();
                     left = insertAtLeft(left, x);
-                    break;
+                        break;
 
         case 3 :    display(left);
                         break;
+
       }
     }while(ch < 4);
 
