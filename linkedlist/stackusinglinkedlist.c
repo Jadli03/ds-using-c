@@ -18,7 +18,7 @@ void display(stack*);
 
 stack*  push(stack* top, int n)
 {
-    stack* p=(stack*)malloc(sizeof(stack*));
+    stack* p=(stack*)malloc(sizeof(stack));
 
     if(p==NULL)
         printf("memory not allocated");
