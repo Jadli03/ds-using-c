@@ -1,8 +1,7 @@
 /**
 Problem - Wrtie a c program to implement singly linked list.
 Author - Suraj Jadli
-Course - MCA
-Date - 30-04-2021
+
 **/
 
 #include<stdio.h>
