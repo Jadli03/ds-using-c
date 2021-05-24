@@ -82,6 +82,42 @@ void display(node *left)
     }
 }
 
+/// function to reverse a linked list using  recursion
+node* recusrion_rev(node* head)
+{
+    if(head == NULL || head->next == NULL)
+        return head;
+
+    node* newHead = recusrion_rev(head->next);
+        node* q = head->next;
+        q->next = head;
+        head->next = NULL;
+
+    ///for above three line we can write below two line
+    /// head->next->next = head;
+     ///head -> next = NULL;
+
+     return newHead;
+}
+
+///function to reverse linked list  using iterative method
+
+node* reverse(node* left)
+ {
+     node *current,*prev,*nextt;
+     prev = NULL;
+     current = left;
+
+     while(current != NULL)
+     {
+         nextt = current->next;
+         current->next = prev;
+         prev = current;
+         current = nextt;
+     }
+    left = prev;
+     return left;
+ }
 
 
 int main()
@@ -92,7 +128,7 @@ int main()
     do
     {
      printf("\n\n \t\t\t Singly LinkedList Menu \n");
-     printf("1.insertAtRight \t 2.insertAtLeft \t 3.display \t 4.exit \n");
+     printf("1.insertAtRight\n 2.insertAtLeft\n 3.display\n 4.reverse using recursion\n 5. reverse using iterative method\n 6. exit \n");
      printf("enter the choice => ");
      scanf("%d",&ch);
       switch(ch)
@@ -112,8 +148,16 @@ int main()
         case 3 :    display(left);
                         break;
 
+        case 4 :    right = left;
+                    left = recusrion_rev(left);
+                    break;
+
+        case 5 :    right = left;
+                    left = reverse(left);
+                    break;
+
       }
-    }while(ch < 4);
+    }while(ch < 6);
 
 
 
