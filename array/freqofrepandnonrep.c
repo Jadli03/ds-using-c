@@ -1,6 +1,5 @@
 /**
-Problem - Wrtie a c program to arrange negative and postive element of
-          an array in alternate position
+Problem - Wrtie a c program to print frequency of each number
 Author - Suraj Jadli
 Date - 20-04-2021
 **/
