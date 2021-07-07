@@ -1,6 +1,6 @@
 
 /**
-Problem - Wrtie a c program to implement singly linked list.
+Problem - Wrtie a c program to implement circular linked list.
 Author - Suraj Jadli
 
 **/
